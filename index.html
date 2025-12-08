@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Azael Antonio Ramos RS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Animaciones personalizadas */
+        @keyframes shine {
+            100% { transform: translateX(100%); }
+        }
+        .animate-shine {
+            animation: shine 1.5s infinite;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translate3d(0, 40px, 0); }
+            to { opacity: 1; transform: translate3d(0, 0, 0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        /* Selección de texto */
+        ::selection {
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black text-slate-100 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl md:text-2xl font-bold tracking-tighter bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent hover:scale-105 transition-transform cursor-default">
+                        AZAEL ANTONIO RAMOS RS
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-slate-300 hover:text-blue-400 hover:bg-slate-900 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:-translate-y-1">Inicio</a>
+                        <a href="#about" class="text-slate-300 hover:text-blue-400 hover:bg-slate-900 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:-translate-y-1">Sobre Mí</a>
+                        <a href="#skills" class="text-slate-300 hover:text-blue-400 hover:bg-slate-900 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:-translate-y-1">Habilidades</a>
+                        <a href="#certifications" class="text-slate-300 hover:text-blue-400 hover:bg-slate-900 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:-translate-y-1">Certificaciones</a>
+                        <a href="#shop" class="text-slate-300 hover:text-blue-400 hover:bg-slate-900 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:-translate-y-1">Tienda</a>
+                        <a href="#contact" class="text-slate-300 hover:text-blue-400 hover:bg-slate-900 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:-translate-y-1">Contacto</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none transition-colors">
+                        <i data-lucide="menu" class="block h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-b border-slate-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-gray-300 hover:text-white hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium transition-colors">Inicio</a>
+                <a href="#about" class="text-gray-300 hover:text-white hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium transition-colors">Sobre Mí</a>
+                <a href="#skills" class="text-gray-300 hover:text-white hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium transition-colors">Habilidades</a>
+                <a href="#certifications" class="text-gray-300 hover:text-white hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium transition-colors">Certificaciones</a>
+                <a href="#shop" class="text-gray-300 hover:text-white hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium transition-colors">Tienda</a>
+                <a href="#contact" class="text-gray-300 hover:text-white hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium transition-colors">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-black text-white">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img 
+                src="https://images.unsplash.com/photo-1621689731676-47b2c0022378?q=80&w=2070&auto=format&fit=crop" 
+                alt="Bugatti Hypercar Deportivo"
+                class="w-full h-full object-cover object-center opacity-60"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1974&auto=format&fit=crop';"
+            >
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <!-- Foto de Perfil -->
+                <div class="flex justify-center mb-8">
+                    <div class="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-blue-500 shadow-[0_0_30px_rgba(59,130,246,0.5)] animate-fade-in-up hover:scale-105 transition-transform duration-500">
+                        <img 
+                            src="IMG_20251125_114946.jpg" 
+                            alt="Azael Antonio Ramos RS"
+                            class="w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2070&auto=format&fit=crop';"
+                        >
+                    </div>
+                </div>
+
+                <div class="inline-flex items-center px-4 py-2 rounded-full border border-blue-500/30 bg-blue-900/20 text-blue-300 mb-8 backdrop-blur-md animate-fade-in-up">
+                    <span class="flex h-2 w-2 rounded-full bg-blue-400 mr-2 animate-pulse shadow-[0_0_10px_#60a5fa]"></span>
+                    Disponible para proyectos y consultoría
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-2xl">
+                    Ingeniería Automotriz <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 animate-gradient-x">Innovación y Precisión</span>
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-xl text-slate-300 drop-shadow-md">
+                    Soy Azael Antonio Ramos RS. Combino la ingeniería mecánica avanzada con certificaciones líderes en la industria para crear el futuro de la movilidad.
+                </p>
+                <div class="mt-12 flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="#contact" class="group relative px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-black bg-blue-500 overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] hover:scale-105 active:scale-95">
+                        <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-shine"></div>
+                        <span class="relative">Contactar</span>
+                    </a>
+                    <a href="#certifications" class="px-8 py-4 border border-slate-600 text-lg font-bold rounded-lg text-white hover:bg-slate-800 hover:border-blue-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-sm">
+                        Ver Credenciales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-zinc-900 overflow-hidden relative">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="mb-10">
+                <h2 class="text-sm text-blue-400 font-bold tracking-widest uppercase mb-2">Sobre Mí</h2>
+                <h3 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    Ingeniero. Innovador. <br/>
+                    <span class="text-slate-400">Entusiasta.</span>
+                </h3>
+                <p class="text-lg text-slate-400 leading-relaxed mb-8">
+                    Mi pasión por el mundo automotriz va más allá de la mecánica tradicional; se trata de la integración perfecta entre la potencia física y la inteligencia digital. Con un enfoque multidisciplinario, busco entender y optimizar cada sistema del vehículo, desde el motor hasta la conectividad en la nube.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div class="bg-black/50 p-6 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-colors hover:shadow-[0_0_20px_rgba(37,99,235,0.1)]">
+                    <i data-lucide="wrench" class="w-10 h-10 text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 text-white">Ingeniería Aplicada</h4>
+                    <p class="text-slate-400 text-sm">Experiencia práctica en diagnóstico, mantenimiento y optimización de sistemas.</p>
+                </div>
+                <div class="bg-black/50 p-6 rounded-xl border border-slate-800 hover:border-indigo-500/50 transition-colors hover:shadow-[0_0_20px_rgba(79,70,229,0.1)]">
+                    <i data-lucide="award" class="w-10 h-10 text-indigo-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 text-white">Certificación Continua</h4>
+                    <p class="text-slate-400 text-sm">Compromiso con el aprendizaje constante en tecnologías IT y diseño.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-24 bg-black border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-20 text-center">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Certificaciones y Licencias</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full"></div>
+                <p class="mt-6 max-w-2xl mx-auto text-xl text-slate-400">
+                    Validación técnica de estándares globales.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                
+                <!-- Ing y Ciencia -->
+                <div class="group relative bg-zinc-900 rounded-2xl p-1 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)]">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative h-full bg-zinc-900 rounded-xl p-8 border border-slate-800 group-hover:border-transparent">
+                        <div class="flex items-center mb-8">
+                            <div class="p-4 bg-slate-950 rounded-2xl mr-6 border border-slate-800 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                                <i data-lucide="cpu" class="w-8 h-8 text-blue-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Ingeniería & Ciencia</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Certificación en Procesos Científicos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Análisis de Datos y Simulación Física</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Termodinámica Aplicada</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Infra y Redes -->
+                <div class="group relative bg-zinc-900 rounded-2xl p-1 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)]">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative h-full bg-zinc-900 rounded-xl p-8 border border-slate-800 group-hover:border-transparent">
+                        <div class="flex items-center mb-8">
+                            <div class="p-4 bg-slate-950 rounded-2xl mr-6 border border-slate-800 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                                <i data-lucide="terminal" class="w-8 h-8 text-indigo-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Infraestructura & Redes</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Cisco Certified Network Associate (CCNA)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Protocolos de Comunicación Automotriz (CAN Bus)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Seguridad en Redes Industriales</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Software -->
+                <div class="group relative bg-zinc-900 rounded-2xl p-1 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)]">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative h-full bg-zinc-900 rounded-xl p-8 border border-slate-800 group-hover:border-transparent">
+                        <div class="flex items-center mb-8">
+                            <div class="p-4 bg-slate-950 rounded-2xl mr-6 border border-slate-800 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                                <i data-lucide="monitor" class="w-8 h-8 text-green-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Software & Productividad</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Microsoft Office Specialist (Excel Expert)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Gestión de Proyectos con MS Project</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Power BI para Análisis de Métricas</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Diseño -->
+                <div class="group relative bg-zinc-900 rounded-2xl p-1 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)]">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative h-full bg-zinc-900 rounded-xl p-8 border border-slate-800 group-hover:border-transparent">
+                        <div class="flex items-center mb-8">
+                            <div class="p-4 bg-slate-950 rounded-2xl mr-6 border border-slate-800 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                                <i data-lucide="pen-tool" class="w-8 h-8 text-pink-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Diseño & Documentación</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Adobe Creative Cloud (Illustrator, Photoshop)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Diseño de Manuales Técnicos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-lg text-slate-300">Renderizado y Presentación de Prototipos</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Grid -->
+    <section id="skills" class="py-24 bg-zinc-950 text-white relative overflow-hidden">
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px); background-size: 40px 40px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Habilidades Técnicas</h2>
+                <p class="text-slate-400">Arsenal de herramientas para la ingeniería moderna</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="group bg-black/40 backdrop-blur-sm p-6 rounded-xl text-center border border-slate-800 hover:border-blue-500 transition-all duration-300 hover:bg-slate-900 hover:scale-105 cursor-default hover:shadow-lg hover:shadow-blue-900/20">
+                    <span class="font-semibold text-sm md:text-base text-slate-300 group-hover:text-white transition-colors block">Diseño CAD</span>
+                </div>
+                <div class="group bg-black/40 backdrop-blur-sm p-6 rounded-xl text-center border border-slate-800 hover:border-blue-500 transition-all duration-300 hover:bg-slate-900 hover:scale-105 cursor-default hover:shadow-lg hover:shadow-blue-900/20">
+                    <span class="font-semibold text-sm md:text-base text-slate-300 group-hover:text-white transition-colors block">Diagnóstico Electrónico</span>
+                </div>
+                <div class="group bg-black/40 backdrop-blur-sm p-6 rounded-xl text-center border border-slate-800 hover:border-blue-500 transition-all duration-300 hover:bg-slate-900 hover:scale-105 cursor-default hover:shadow-lg hover:shadow-blue-900/20">
+                    <span class="font-semibold text-sm md:text-base text-slate-300 group-hover:text-white transition-colors block">Gestión ISO/TS</span>
+                </div>
+                <div class="group bg-black/40 backdrop-blur-sm p-6 rounded-xl text-center border border-slate-800 hover:border-blue-500 transition-all duration-300 hover:bg-slate-900 hover:scale-105 cursor-default hover:shadow-lg hover:shadow-blue-900/20">
+                    <span class="font-semibold text-sm md:text-base text-slate-300 group-hover:text-white transition-colors block">Mecánica de Fluidos</span>
+                </div>
+                <div class="group bg-black/40 backdrop-blur-sm p-6 rounded-xl text-center border border-slate-800 hover:border-blue-500 transition-all duration-300 hover:bg-slate-900 hover:scale-105 cursor-default hover:shadow-lg hover:shadow-blue-900/20">
+                    <span class="font-semibold text-sm md:text-base text-slate-300 group-hover:text-white transition-colors block">Programación ECU</span>
+                </div>
+                <div class="group bg-black/40 backdrop-blur-sm p-6 rounded-xl text-center border border-slate-800 hover:border-blue-500 transition-all duration-300 hover:bg-slate-900 hover:scale-105 cursor-default hover:shadow-lg hover:shadow-blue-900/20">
+                    <span class="font-semibold text-sm md:text-base text-slate-300 group-hover:text-white transition-colors block">Liderazgo Técnico</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="py-24 bg-zinc-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-8">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-2">Venta de Piezas</h2>
+                        <p class="text-slate-400 text-lg">Componentes esenciales de alto rendimiento para el mantenimiento automotriz.</p>
+                    </div>
+                    <div class="flex items-center space-x-2 mt-4 md:mt-0">
+                        <i data-lucide="filter" class="w-5 h-5 text-blue-500"></i>
+                        <span class="text-slate-300 font-medium">Filtrar por:</span>
+                    </div>
+                </div>
+                
+                <!-- Filtros -->
+                <div class="flex flex-wrap gap-2 mb-8" id="category-filters">
+                    <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-blue-600 text-white shadow-lg shadow-blue-600/30" data-category="Todos">Todos</button>
+                    <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-black border border-slate-700 text-slate-400 hover:bg-slate-800 hover:text-white" data-category="Mantenimiento">Mantenimiento</button>
+                    <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-black border border-slate-700 text-slate-400 hover:bg-slate-800 hover:text-white" data-category="Frenos">Frenos</button>
+                    <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-black border border-slate-700 text-slate-400 hover:bg-slate-800 hover:text-white" data-category="Suspensión">Suspensión</button>
+                    <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-black border border-slate-700 text-slate-400 hover:bg-slate-800 hover:text-white" data-category="Llantas">Llantas</button>
+                </div>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Producto 1: Aceite -->
+                <div class="product-card group bg-black rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col h-full" data-category="Mantenimiento">
+                    <div class="relative h-48 overflow-hidden bg-slate-900">
+                        <div class="absolute inset-0 bg-blue-500/10 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop" alt="Aceite Sintético" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-2 right-2 z-20 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">Mantenimiento</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg font-bold text-white mb-2 truncate">Aceite Sintético Mobil 1 5W-30</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-2">Protección avanzada para motores modernos.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-800">
+                            <span class="text-xl font-bold text-blue-400">$950.00 MXN</span>
+                            <button class="p-2 bg-slate-800 rounded-full text-white hover:bg-blue-600 transition-colors group-hover:scale-110 hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2: Bujías -->
+                <div class="product-card group bg-black rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col h-full" data-category="Mantenimiento">
+                    <div class="relative h-48 overflow-hidden bg-slate-900">
+                        <div class="absolute inset-0 bg-blue-500/10 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=2070&auto=format&fit=crop" alt="Bujías NGK" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-2 right-2 z-20 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">Mantenimiento</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg font-bold text-white mb-2 truncate">Bujías NGK Iridium (Set 4)</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-2">Chispa constante para una combustión eficiente.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-800">
+                            <span class="text-xl font-bold text-blue-400">$1,100.00 MXN</span>
+                            <button class="p-2 bg-slate-800 rounded-full text-white hover:bg-blue-600 transition-colors group-hover:scale-110 hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3: Discos -->
+                <div class="product-card group bg-black rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col h-full" data-category="Frenos">
+                    <div class="relative h-48 overflow-hidden bg-slate-900">
+                        <div class="absolute inset-0 bg-blue-500/10 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1983&auto=format&fit=crop" alt="Discos Ventilados" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-2 right-2 z-20 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">Frenos</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg font-bold text-white mb-2 truncate">Discos Ventilados Perforados</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-2">Mejor disipación de calor para frenadas seguras.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-800">
+                            <span class="text-xl font-bold text-blue-400">$4,200.00 MXN</span>
+                            <button class="p-2 bg-slate-800 rounded-full text-white hover:bg-blue-600 transition-colors group-hover:scale-110 hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4: Amortiguadores -->
+                <div class="product-card group bg-black rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col h-full" data-category="Suspensión">
+                    <div class="relative h-48 overflow-hidden bg-slate-900">
+                        <div class="absolute inset-0 bg-blue-500/10 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1931&auto=format&fit=crop" alt="Amortiguadores" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-2 right-2 z-20 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">Suspensión</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg font-bold text-white mb-2 truncate">Amortiguadores Bilstein B6</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-2">Restura la estabilidad original del vehículo.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-800">
+                            <span class="text-xl font-bold text-blue-400">$12,400.00 MXN</span>
+                            <button class="p-2 bg-slate-800 rounded-full text-white hover:bg-blue-600 transition-colors group-hover:scale-110 hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5: Continental -->
+                <div class="product-card group bg-black rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col h-full" data-category="Llantas">
+                    <div class="relative h-48 overflow-hidden bg-slate-900">
+                        <div class="absolute inset-0 bg-blue-500/10 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2070&auto=format&fit=crop" alt="Continental" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-2 right-2 z-20 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">Llantas</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg font-bold text-white mb-2 truncate">Continental ExtremeContact</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-2">Excelente durabilidad y tracción confiable.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-800">
+                            <span class="text-xl font-bold text-blue-400">$4,100.00 MXN</span>
+                            <button class="p-2 bg-slate-800 rounded-full text-white hover:bg-blue-600 transition-colors group-hover:scale-110 hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white py-20 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Azael Antonio Ramos RS</h3>
+                    <p class="text-slate-400 mb-8 max-w-md text-lg leading-relaxed">
+                        Ingeniero Automotriz listo para colaborar en el próximo gran desafío. Innovación, precisión y potencia.
+                    </p>
+                    
+                    <div class="flex flex-col gap-4">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=azaa.ramd05@gmail.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-4 border border-slate-800 bg-zinc-900/50 rounded-lg text-base font-medium text-slate-300 hover:bg-blue-600 hover:text-white hover:border-transparent transition-all duration-300 w-fit group">
+                            <i data-lucide="mail" class="w-5 h-5 mr-3 group-hover:animate-bounce"></i>
+                            azaa.ramd05@gmail.com
+                        </a>
+                        
+                        <button class="inline-flex items-center px-6 py-4 border border-blue-500/30 bg-blue-500/10 rounded-lg text-base font-medium text-blue-400 hover:bg-blue-500 hover:text-white transition-all duration-300 w-fit group">
+                            <i data-lucide="download" class="w-5 h-5 mr-3 group-hover:animate-pulse"></i>
+                            Descargar CV (PDF)
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:items-end justify-center">
+                    <h4 class="text-xl font-semibold mb-8 text-slate-200">Sígueme en Redes</h4>
+                    <div class="flex space-x-6">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/azael-ramos-de-la-rosa-279b2324b" target="_blank" rel="noopener noreferrer" class="transform hover:-translate-y-2 hover:rotate-6 transition-all duration-300 p-4 bg-zinc-900 border border-slate-800 rounded-2xl hover:bg-blue-700 hover:border-transparent group shadow-lg">
+                            <i data-lucide="linkedin" class="w-8 h-8 text-slate-400 group-hover:text-white"></i>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/azael_antonio_ramos_rs/" target="_blank" rel="noopener noreferrer" class="transform hover:-translate-y-2 hover:rotate-6 transition-all duration-300 p-4 bg-zinc-900 border border-slate-800 rounded-2xl hover:bg-gradient-to-tr hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 hover:border-transparent group shadow-lg">
+                            <i data-lucide="instagram" class="w-8 h-8 text-slate-400 group-hover:text-white"></i>
+                        </a>
+                        
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/antonioo.ramos.rs" target="_blank" rel="noopener noreferrer" class="transform hover:-translate-y-2 hover:-rotate-6 transition-all duration-300 p-4 bg-zinc-900 border border-slate-800 rounded-2xl hover:bg-blue-600 hover:border-transparent group shadow-lg">
+                            <i data-lucide="facebook" class="w-8 h-8 text-slate-400 group-hover:text-white"></i>
+                        </a>
+                        
+                        <!-- Twitter/X -->
+                        <a href="https://x.com/AZAELSAD" target="_blank" rel="noopener noreferrer" class="transform hover:-translate-y-2 hover:rotate-6 transition-all duration-300 p-4 bg-zinc-900 border border-slate-800 rounded-2xl hover:bg-black hover:border-white group shadow-lg">
+                            <i data-lucide="twitter" class="w-8 h-8 text-slate-400 group-hover:text-white"></i>
+                        </a>
+                    </div>
+                    <p class="text-slate-500 mt-8 text-sm">
+                        Diseñado para la alta velocidad.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-900 pt-8 text-center text-slate-600 text-sm">
+                <p>&copy; 2025 Azael Antonio Ramos RS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Shop Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active styling from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-blue-600', 'text-white', 'shadow-lg');
+                    b.classList.add('bg-black', 'text-slate-400');
+                });
+                // Add active styling to clicked button
+                btn.classList.remove('bg-black', 'text-slate-400');
+                btn.classList.add('bg-blue-600', 'text-white', 'shadow-lg');
+
+                const category = btn.getAttribute('data-category');
+
+                productCards.forEach(card => {
+                    if (category === 'Todos' || card.getAttribute('data-category') === category) {
+                        card.classList.remove('hidden');
+                        card.classList.add('flex'); // Restore flex layout
+                    } else {
+                        card.classList.add('hidden');
+                        card.classList.remove('flex');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
